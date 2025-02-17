@@ -17,9 +17,9 @@ class CurrencyConverterLogic:
 
             if response.status_code == 200:
                 data = response.json()
-                rates = data.get("data")  # Словарь с курсами валют
+                rates = data.get("data") 
                 if isinstance(rates, dict):
-                    return list(rates.keys())  # Возвращаем список названий валют
+                    return list(rates.keys()) 
                 else:
                     print("Ошибка: Некорректный формат ответа API")
                     return None
